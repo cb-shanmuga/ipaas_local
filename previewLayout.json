@@ -1,27 +1,42 @@
 {
-   "logo":"/third_party/cn-activecampaign.png",
-   "integDispName":"ActiveCampaign",
-   "subStepList":[
-      {
-         "stepName":"Connect",
-         "stepId":"connect"
-       
-      },
-      {
-         "stepName":"Data Validation",
-         "stepId":"step_1"
-      },
-      {
-         "stepName":"Configure Sync Preferences ",
-         "stepId":"step_2"
-      },
-      {
-         "stepName":"Run Initial Sync",
-         "stepId":"step_3"
-      },
-      {
-         "stepName":"Final step",
-         "stepId":"completed"
+  "logo": "/third_party/cn-activecampaign.png",
+  "integDispName": "ActiveCampaign",
+  "subStepList": [
+    {
+      "stepName": "Connect",
+      "stepId": "connect"
+    },
+    {
+      "stepName": "Data Validation",
+      "stepId": "step_1"
+    },
+    {
+      "stepName": "Configure Sync Preferences ",
+      "stepId": "step_2"
+    },
+    {
+      "stepName": "Run Initial Sync",
+      "stepId": "step_3"
+    },
+    {
+      "stepName": "Final step",
+      "stepId": "completed",
+      "editConfig": {
+        "title": "Manage how Chargebee syncs data with Hubspot",
+        "display": "Manage Sync Rules",
+        "apiEndPoint": {
+          "type": "GET",
+          "apiUrl": "https://raw.githubusercontent.com/cb-shanmugar/ipaas-hubspot/master/manage_sync_rule.json",
+          "headers": {
+            "Elements-Formula-Instance-Id": "399324"
+          },
+          "input": {
+            "type": "hubspot",
+            "siteDomain": "localcb.in:9443",
+            "op": "edit"
+          }
+        }
       }
-   ]
+    }
+  ]
 }
