@@ -1,0 +1,83 @@
+{
+  "icon": "/third_party/cn-xero.png",
+  "overview": [
+    {
+      "card": {
+        "buttons": [
+          {
+            "buttonLook": "EMPTY",
+            "display": "Sync now",
+            "icon": "AUTO_RENEW",
+            "id": "sync",
+            "request": {
+              "apiEndPoint": {
+                "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/fullSyncRun",
+                "headers": {
+                  "Elements-Formula-Instance-Id": 416319
+                },
+                "input": {
+                  "api-key": "test_G8j8CxwFsI2cuZsHzlcdKff9ZvhTs5MicdF",
+                  "site-name": "lakshmipriya-test",
+                  "siteDomain": "predev3.in",
+                  "syncAgain": "true",
+                  "syncNow": "syncNow"
+                },
+                "type": "GET"
+              },
+              "type": "ON_CLICK_GET_CARD"
+            },
+            "type": "DIRECT_LINK"
+          }
+        ],
+        "heading": "Error",
+        "icon": "ERROR",
+        "id": "check2",
+        "subHeading": "An issue was encountered due to which the sync did not succeed. Please retry sync and if the issue still persists, contact support",
+        "type": "ACTION2"
+      },
+      "id": "overview",
+      "isCardDone": "true"
+    }
+  ],
+  "syncErrors": [
+    {
+      "card": {
+        "heading": "No errors found",
+        "icon": "WARNING",
+        "listActionContent": [
+          
+        ],
+        "type": "ACTION"
+      },
+      "id": "sync_errors",
+      "isCardDone": "true"
+    }
+  ],
+ 
+  "unlink": {
+    "buttonLook": "MUTTED",
+    "display": "Unlink Integration",
+    "id": "unlink",
+    "popUp": {
+      "apiEndPoint": {
+        "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/unlink",
+        "headers": {
+          "Elements-Formula-Instance-Id": "420915"
+        },
+        "input": {
+          "apiKey": "test_G8j8CxwFsI2cuZsHzlcdKff9ZvhTs5MicdF",
+          "integrationName": "pipedrive",
+          "siteDomain": "predev3.in",
+          "siteName": "lakshmipriya-test"
+        },
+        "type": "GET"
+      },
+      "cancelButton": "Dismiss",
+      "description": "This will remove all the configuration details such as login authentication, configurations mapping etc. If you want to sync again, you will have to start the sync process from the beginning.",
+      "submitButton": "Unlink",
+      "title": "Do you really want to unlink the integration?",
+      "type": "SIMPLE"
+    },
+    "type": "POP_UP"
+  }
+}
