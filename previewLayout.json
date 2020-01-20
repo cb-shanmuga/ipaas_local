@@ -37,6 +37,59 @@
           }
         }
       },
+      "overview": [
+    {
+      "card": {
+        "buttons": [
+          {
+            "buttonLook": "EMPTY",
+            "display": "Sync now",
+            "icon": "AUTO_RENEW",
+            "id": "sync",
+            "request": {
+              "apiEndPoint": {
+                "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/fullSyncRun",
+                "headers": {
+                  "Elements-Formula-Instance-Id": 416319
+                },
+                "input": {
+                  "api-key": "test_G8j8CxwFsI2cuZsHzlcdKff9ZvhTs5MicdF",
+                  "site-name": "lakshmipriya-test",
+                  "siteDomain": "predev3.in",
+                  "syncAgain": "true",
+                  "syncNow": "syncNow"
+                },
+                "type": "GET"
+              },
+              "type": "ON_CLICK_GET_CARD"
+            },
+            "type": "DIRECT_LINK"
+          }
+        ],
+        "heading": "Error",
+        "icon": "ERROR",
+        "id": "check2",
+        "subHeading": "An issue was encountered due to which the sync did not succeed. Please retry sync and if the issue still persists, contact support",
+        "type": "ACTION2"
+      },
+      "id": "overview",
+      "isCardDone": "true"
+    }
+  ],
+  "syncErrors": [
+    {
+      "card": {
+        "heading": "No errors found",
+        "icon": "WARNING",
+        "listActionContent": [
+          
+        ],
+        "type": "ACTION"
+      },
+      "id": "sync_errors",
+      "isCardDone": "true"
+    }
+  ],
        "unlink": {
     "buttonLook": "MUTTED",
     "display": "Unlink Integration",
