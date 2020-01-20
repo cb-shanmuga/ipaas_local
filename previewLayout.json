@@ -26,7 +26,7 @@
         "display": "Manage Sync Rules",
         "apiEndPoint": {
           "type": "GET",
-          "apiUrl": "https://raw.githubusercontent.com/cb-shanmugar/ipaas-hubspot/master/manage_sync_rule.json",
+          "apiUrl": "https://raw.githubusercontent.com/cb-shanmugar/ipaas_local_pipedrive/master/manage_sync_popup2.json",
           "headers": {
             "Elements-Formula-Instance-Id": "399324"
           },
@@ -36,7 +36,33 @@
             "op": "edit"
           }
         }
-      }
+      },
+       "unlink": {
+    "buttonLook": "MUTTED",
+    "display": "Unlink Integration",
+    "id": "unlink",
+    "popUp": {
+      "apiEndPoint": {
+        "apiUrl": "https://staging.cloud-elements.com/elements/api-v2/pipedrive/unlink",
+        "headers": {
+          "Elements-Formula-Instance-Id": "420915"
+        },
+        "input": {
+          "apiKey": "test_G8j8CxwFsI2cuZsHzlcdKff9ZvhTs5MicdF",
+          "integrationName": "pipedrive",
+          "siteDomain": "predev3.in",
+          "siteName": "lakshmipriya-test"
+        },
+        "type": "GET"
+      },
+      "cancelButton": "Dismiss",
+      "description": "This will remove all the configuration details such as login authentication, configurations mapping etc. If you want to sync again, you will have to start the sync process from the beginning.",
+      "submitButton": "Unlink",
+      "title": "Do you really want to unlink the integration?",
+      "type": "SIMPLE"
+    },
+    "type": "POP_UP"
+  }
     }
   ]
 }
